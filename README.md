@@ -2,7 +2,7 @@ PDF Flipbook Projesi
 ====================
 
 Bu proje, PDF dosyalarının web tarayıcısı üzerinde interaktif ve görsel olarak zengin bir şekilde kitap (flipbook) formatında sunulmasını sağlar. Bootstrap 5, PDF.js ve Turn.js teknolojileri ile oluşturulmuştur.
-
+![EBS](https://github.com/ebubekirbastama/EBSFlipbookGostericiPDF/blob/2edfdfe0ff072674143a02b2c46624723b11eff2/ebs.png)
 Özellikler
 ----------
 - PDF dosyasını sayfa sayfa görselleştirir.
