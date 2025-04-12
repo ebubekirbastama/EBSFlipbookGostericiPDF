@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipbook with PDF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="turn.min.js" type="text/javascript"></script>
+    <script src="turn.js" type="text/javascript"></script>
+    <style type="text/css">
+     body{background:url('https://ebubekirbastama.com.tr/circles.webp');text-align:center}#magazine{width:1152px;height:1014px;margin:0 auto;position:relative;box-shadow:0 0 15px rgba(0,0,0,.2)}#magazine .turn-page{background-color:#fff;background-size:100% 100%;box-shadow:5px 5px 10px rgba(0,0,0,.3);border-radius:10px}.controls,.size-controls{margin-top:20px}.controls button{margin:0 10px}.page-info{margin-top:10px}.size-controls input{width:100px;margin:0 10px}
+    </style>
+</head>
+<body>
+
+<!-- Dosya Seçici -->
+<!-- PDF dosyasını yüklemek için manuel dosya seçmeye gerek yok. Sunucu tarafında PDF'yi bulacak. -->
+<div id="magazine"></div>
+
+<!-- Kontrol Düğmeleri ve Sayfa Bilgisi -->
+<div class="controls">
+    <button id="prevPage" class="btn btn-primary">Önceki Sayfa</button>
+    <button id="nextPage" class="btn btn-primary">Sonraki Sayfa</button>
+</div>
+
+<div class="page-info">
+    <span id="currentPage">Sayfa: 1</span> / <span id="totalPages">0</span>
+</div>
+
+<!-- Sayfa Boyutu Kontrolü -->
+<div class="size-controls">
+    <label for="pageWidth">Sayfa Genişliği:</label>
+    <input type="range" id="pageWidth" min="400" max="1600" value="1152">
+    <span id="widthValue">1152px</span>
+
+    <label for="pageHeight">Sayfa Yüksekliği:</label>
+    <input type="range" id="pageHeight" min="300" max="1200" value="752">
+    <span id="heightValue">752px</span>
+</div>
+
+<!-- Ses dosyasını ekle -->
+<audio id="pageTurnSound" src="https://www.soundjay.com/misc/sounds/page-flip-02.mp3" preload="auto"></audio>
+
+<script type="text/javascript">
+const _0x5a1164=_0x4987;(function(_0x4aa061,_0xbfff69){const _0x40cbfc=_0x4987,_0x1ed737=_0x4aa061();while(!![]){try{const _0x22c50d=-parseInt(_0x40cbfc(0xf6))/0x1*(-parseInt(_0x40cbfc(0x10f))/0x2)+parseInt(_0x40cbfc(0x104))/0x3*(-parseInt(_0x40cbfc(0xf4))/0x4)+parseInt(_0x40cbfc(0xf8))/0x5+-parseInt(_0x40cbfc(0x100))/0x6+parseInt(_0x40cbfc(0x105))/0x7+-parseInt(_0x40cbfc(0x109))/0x8*(-parseInt(_0x40cbfc(0xe8))/0x9)+-parseInt(_0x40cbfc(0xf9))/0xa*(parseInt(_0x40cbfc(0xe5))/0xb);if(_0x22c50d===_0xbfff69)break;else _0x1ed737['push'](_0x1ed737['shift']());}catch(_0x271367){_0x1ed737['push'](_0x1ed737['shift']());}}}(_0x1692,0xf3e1a));function _0x1692(){const _0x27979c=['font','#pageHeight','16NBooGJ','16px\x20Arial','19QWMmVr','getViewport','5594085JdkCib','20DovyWW','#heightValue','height','double','empty','then','createElement','11496636rliJHx','fillText','all','getPage','1184079NtywkP','10629934zKFJZC','isTouch','www.ebubekirbastama.com.tr','toDataURL','224PYnSXE','fillStyle','#nextPage','example.pdf','canvas','previous','100162tqIWGS','push','next','val','right','numPages','textAlign','pageTurnSound','#prevPage','rgba(0,\x200,\x200,\x200.6)','2841487qGhjQl','width','text','456921hxHHsr','getContext','#currentPage','input','click','play','#widthValue','append','src','#magazine'];_0x1692=function(){return _0x27979c;};return _0x1692();}let pdfDoc=null,currentPage=0x1;debugger;function loadPDF(){const _0x41639a=_0x4987,_0x9ae274=_0x41639a(0x10c);pdfjsLib['getDocument'](_0x9ae274)['promise'][_0x41639a(0xfe)](function(_0x248cfe){const _0x224a48=_0x41639a;pdfDoc=_0x248cfe;const _0x16ef71=_0x248cfe['numPages'],_0x4d9e54=$('#magazine');_0x4d9e54[_0x224a48(0xfd)]();let _0x48590e=[],_0x2328f1=[];for(let _0x5a4983=0x1;_0x5a4983<=_0x16ef71;_0x5a4983++){_0x48590e[_0x224a48(0x110)](_0x248cfe[_0x224a48(0x103)](_0x5a4983)['then'](function(_0x3d3205){const _0x54a72c=_0x224a48,_0x2e24c5=1.5,_0x2ef0a5=_0x3d3205[_0x54a72c(0xf7)]({'scale':_0x2e24c5}),_0x3c97f4=document[_0x54a72c(0xff)](_0x54a72c(0x10d)),_0x4ffc22=_0x3c97f4[_0x54a72c(0xe9)]('2d');_0x3c97f4[_0x54a72c(0xfb)]=_0x2ef0a5[_0x54a72c(0xfb)],_0x3c97f4[_0x54a72c(0xe6)]=_0x2ef0a5[_0x54a72c(0xe6)];debugger;return _0x3d3205['render']({'canvasContext':_0x4ffc22,'viewport':_0x2ef0a5})['promise'][_0x54a72c(0xfe)](function(){const _0x520005=_0x54a72c;_0x4ffc22[_0x520005(0xf2)]=_0x520005(0xf5),_0x4ffc22[_0x520005(0x10a)]=_0x520005(0xe4),_0x4ffc22[_0x520005(0xe1)]=_0x520005(0x113),_0x4ffc22[_0x520005(0x101)](_0x520005(0x107),_0x3c97f4['width']-0xa,_0x3c97f4[_0x520005(0xfb)]-0xa);const _0x4c7744=new Image();return _0x4c7744[_0x520005(0xf0)]=_0x3c97f4[_0x520005(0x108)](),_0x4c7744;});}));}Promise[_0x224a48(0x102)](_0x48590e)[_0x224a48(0xfe)](function(_0x5ecfce){const _0x20dd19=_0x224a48;_0x5ecfce['forEach'](function(_0x3d1861){const _0x5aa697=_0x4987;_0x2328f1[_0x5aa697(0x110)]('<div\x20style=\x22background-image:url(\x27'+_0x3d1861[_0x5aa697(0xf0)]+'\x27);\x20cursor:\x20pointer;\x22\x20onclick=\x22window.open(\x27https://www.ebubekirbastama.com.tr\x27,\x20\x27_blank\x27)\x22></div>');}),_0x2328f1['forEach'](function(_0x5ed3db){const _0x4b91cd=_0x4987;_0x4d9e54[_0x4b91cd(0xef)](_0x5ed3db);}),$('#totalPages')[_0x20dd19(0xe7)](_0x5ecfce['length']),initFlipbook();});});}debugger;function _0x4987(_0xc6f309,_0x558c46){const _0x16921d=_0x1692();return _0x4987=function(_0x49876e,_0x5b6980){_0x49876e=_0x49876e-0xe0;let _0x320b77=_0x16921d[_0x49876e];return _0x320b77;},_0x4987(_0xc6f309,_0x558c46);}function initFlipbook(){const _0x12de28=_0x4987;$(_0x12de28(0xf1))['turn']({'display':_0x12de28(0xfc),'acceleration':!![],'gradients':!$[_0x12de28(0x106)],'elevation':0x32,'when':{'turned':function(_0x1cb734,_0x44beb6){currentPage=_0x44beb6,updatePageInfo(),playPageTurnSound();}}});}debugger;function updatePageInfo(){const _0x58a530=_0x4987;$(_0x58a530(0xea))[_0x58a530(0xe7)](currentPage);}function playPageTurnSound(){const _0x217a45=_0x4987,_0x452807=document['getElementById'](_0x217a45(0xe2));_0x452807[_0x217a45(0xed)]();}debugger;$(_0x5a1164(0xe3))['click'](function(){const _0x1dbec1=_0x5a1164;currentPage>0x1&&($(_0x1dbec1(0xf1))['turn'](_0x1dbec1(0x10e)),playPageTurnSound());}),$(_0x5a1164(0x10b))[_0x5a1164(0xec)](function(){const _0x3ba75e=_0x5a1164;currentPage<pdfDoc[_0x3ba75e(0xe0)]&&($(_0x3ba75e(0xf1))['turn'](_0x3ba75e(0x111)),playPageTurnSound());});debugger;$('#pageWidth')['on']('input',function(){const _0x3a0267=_0x5a1164,_0x319977=$(this)[_0x3a0267(0x112)]();$(_0x3a0267(0xf1))['css'](_0x3a0267(0xe6),_0x319977+'px'),$(_0x3a0267(0xee))[_0x3a0267(0xe7)](_0x319977+'px');});debugger;$(_0x5a1164(0xf3))['on'](_0x5a1164(0xeb),function(){const _0x5a4388=_0x5a1164,_0x184dab=$(this)[_0x5a4388(0x112)]();$(_0x5a4388(0xf1))['css']('height',_0x184dab+'px'),$(_0x5a4388(0xfa))[_0x5a4388(0xe7)](_0x184dab+'px');}),loadPDF();
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
